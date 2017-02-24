@@ -1,5 +1,5 @@
 .section {
-  padding: 1rem;
+  // padding: 1rem;
 }
 
 .container {
@@ -10,6 +10,15 @@
 .left-bar {
   width: 20%;
   background: #44B0F1;
+
+  &__top-bar {
+
+    &--text {
+      padding: 0.5rem;
+      background: #E6F4FD;
+      font-weight: bold;
+    }
+  }
 }
 
 .contact-info {
@@ -17,4 +26,13 @@
   &__container {
     padding: 1rem;
   }
+}
+
+.submit-button {
+  padding: 0.8rem;
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  color: white;
+  background: #69C37D;
 }
