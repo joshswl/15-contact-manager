@@ -1,13 +1,5 @@
-.section {
-  // padding: 1rem;
-}
-
-.container {
-  max-width: 65rem;
-  margin: auto;
-}
-
 .left-bar {
+  position: absolute;
   display: flex;
   flex-direction: column;
   width: 20%;
