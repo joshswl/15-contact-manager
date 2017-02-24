@@ -1,0 +1,20 @@
+.section {
+  padding: 1rem;
+}
+
+.container {
+  max-width: 65rem;
+  margin: auto;
+}
+
+.left-bar {
+  width: 20%;
+  background: #44B0F1;
+}
+
+.contact-info {
+
+  &__container {
+    padding: 1rem;
+  }
+}
