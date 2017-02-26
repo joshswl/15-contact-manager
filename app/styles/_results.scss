@@ -6,10 +6,13 @@
   width: 100%;
 
   &__item {
-    background: white;
+    position: relative;
     flex-basis: calc(100% / 3 - 1rem - 1rem);
     margin: 1rem;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #a8a8a8;
+    border-radius: 1%;
+    background: white;
+    max-height: 10rem;
   }
 }
 
@@ -19,8 +22,11 @@
 
   &__name {
     display: flex;
+    font-size: 18px;
+    margin: -1rem 0rem;
 
     &--last {
+
     }
 
     &--comma {
@@ -33,14 +39,16 @@
   }
 
   &__address {
-    font-size: 10px;
 
     &--1 {
-
+      margin: -1rem 0rem;
+      font-size: 14px;
     }
 
     &--2 {
       display: flex;
+      margin: -1rem 0rem;
+      font-size: 14px;
     }
   }
 }
@@ -48,6 +56,7 @@
 .item-button {
 
   &__actual {
+    position: relative;
     padding: 0.8rem;
     border: none;
     width: 100%;
