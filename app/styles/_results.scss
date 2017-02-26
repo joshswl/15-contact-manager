@@ -6,8 +6,53 @@
   width: 100%;
 
   &__item {
+    background: white;
     flex-basis: calc(100% / 3 - 1rem - 1rem);
-    flex-grow: 1;
     margin: 1rem;
+    border: 1px solid #bdbdbd;
+  }
+}
+
+.item-text {
+  padding: 1rem;
+  flex-grow: 1;
+
+  &__name {
+    display: flex;
+
+    &--last {
+    }
+
+    &--comma {
+
+    }
+
+    &--first {
+      margin-left: 0.3rem;
+    }
+  }
+
+  &__address {
+    font-size: 10px;
+
+    &--1 {
+
+    }
+
+    &--2 {
+      display: flex;
+    }
+  }
+}
+
+.item-button {
+
+  &__actual {
+    padding: 0.8rem;
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    color: white;
+    background: #EE3F41;
   }
 }
