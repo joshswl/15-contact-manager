@@ -1,9 +1,11 @@
 .left-bar {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 25%;
   height: 100vh;
   background: #44B0F1;
+  box-shadow: 1px 1px 12px rgba(68,68,68,0.6);
 
   &__top-bar {
 
