@@ -1,6 +1,6 @@
 export default class AppController {
-  constructor(el, store) {
-    this.el = el;
+  constructor(element, store) {
+    this.element = element;
     this.store = store;
   }
   created() {
