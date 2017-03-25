@@ -1,2 +1,9 @@
 import 'whatwg-fetch';
-import Store from './store';
+import store from './store';
+import AppController from './controller/app';
+
+const appElement = document.querySelector('.app');
+
+const app = new AppController(appElement, store);
+
+app.created();
