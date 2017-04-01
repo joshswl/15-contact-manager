@@ -16,7 +16,7 @@ export default class ContactFormView {
           street: this.element.querySelector('.street').value,
           city: this.element.querySelector('.city').value,
           state: this.element.querySelector('.state').value,
-        }
+        };
       });
     });
   }

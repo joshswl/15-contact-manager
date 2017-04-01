@@ -44,4 +44,28 @@ module('reducer', () => {
 
     assert.deepEqual(reducer(oldState, action), expectedState);
   });
+
+  test('it can remove a single contact', (assert) => {
+    const oldState = { contacts: [{ firstName: 'Josh', lastName: 'Lee', id: 1 }] };
+    const action = { type: 'CONTACT@REMOVE', id: 1 };
+    const expectedState = { contacts: [] };
+
+    assert.deepEqual(reducer(oldState, action), expectedState);
+  });
+
+  test('it can remove a contact based on id while letting the others exist', (assert) => {
+    const oldState = { contacts: [{ firstName: 'Josh', lastName: 'Lee', id: 1 }, { firstName: 'Josh', lastName: 'Lee', id: 2 }] };
+    const action = { type: 'CONTACT@REMOVE', id: 1 };
+    const expectedState = { contacts: [{ firstName: 'Josh', lastName: 'Lee', id: 2 }] };
+
+    assert.deepEqual(reducer(oldState, action), expectedState);
+  });
+
+  test('it cannot remove a contact with an id that does not exist', (assert) => {
+    const oldState = { contacts: [{ firstName: 'Josh', lastName: 'Lee', id: 1 }] };
+    const action = { type: 'CONTACT@REMOVE', id: 2 };
+    const expectedState = { contacts: [{ firstName: 'Josh', lastName: 'Lee', id: 1 }] };
+
+    assert.deepEqual(reducer(oldState, action), expectedState);
+  });
 });

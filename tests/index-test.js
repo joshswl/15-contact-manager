@@ -3,4 +3,5 @@
 test('it is working', (assert) => {
   assert.ok(true);
 });
+
 import './reducer-test';

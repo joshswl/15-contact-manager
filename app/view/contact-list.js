@@ -47,8 +47,10 @@ export default class ListView {
   render() {
     this.element.innerHTML = '';
     const contacts = this.store.getState().contacts;
+
     contacts.forEach((data) => {
       const view = new ItemView(data.this.store);
+      view.mounted();
       view.render();
 
       this.element.appendChild(view.element);
