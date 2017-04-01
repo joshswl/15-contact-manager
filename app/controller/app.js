@@ -1,6 +1,8 @@
 import FormView from '../view/contact-form';
 import ListView from '../view/contact-list';
 
+import { findAll } from '../actions';
+
 export default class AppController {
   constructor(element, store) {
     this.element = element;
@@ -10,18 +12,13 @@ export default class AppController {
   }
   created() {
     this.store.subscribe(() => {
-      const contacts = this.store.getState().contacts;
-      window.localStorage.contacts = JSON.stringify(contacts);
+      const contactlist = this.store.getState().contacts;
+      window.localStorage.contacts = JSON.stringify(contactlist);
     });
 
     this.formView.mounted();
     this.listView.mounted();
 
-    const dataString  = window.localStorage.contacts || '[]';
-
-    this.store.dispatch({
-      type: 'CONTACT@FIND_ALL',
-      data: JSON.parse(dataString)
-    });
+    this.store.dispatch(findAll());
   }
 }
