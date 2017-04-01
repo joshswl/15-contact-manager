@@ -7,3 +7,11 @@
 @import 'reset';
 @import 'left-bar';
 @import 'results';
+
+.app {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+}
