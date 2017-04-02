@@ -1,20 +1,19 @@
-const dataString  = window.localStorage.contacts || '[]';
+// const dataString  = window.localStorage.contacts || '[]';
 
-export function findAll() {
+export function findAll(data) {
   return {
     type: 'CONTACT@FIND_ALL',
-    data: JSON.parse(dataString),
+    data,
   };
 }
 
 export function create(data) {
   return {
     type: 'CONTACT@CREATE',
-    data,
-    id: new Data()
+    data: { ...data, id: new Date() }
   };
 }
 
 export function remove(id) {
-  'CONTACT@REMOVE';
+  return { type: 'CONTACT@REMOVE', id };
 }
