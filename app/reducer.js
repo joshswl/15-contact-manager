@@ -3,9 +3,9 @@ export default function reducer(state, action) {
     case 'CONTACT@CREATE':
       return { contacts: action.data, ...state.contacts };
     case 'CONTACT@FIND_ALL':
-      return { contacts: action.data, ...state.contacts };
+      return { contacts: action.data, };
     case 'CONTACT@REMOVE':
-      return { contacts: state.contacts.filter(curr => curr.id !== action.id) };
+      return { contacts: state.contacts.filter(contact => contact.id !== action.id) };
     default:
       return state || { contacts: [] };
   }
