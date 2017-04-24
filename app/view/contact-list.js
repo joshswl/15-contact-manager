@@ -35,7 +35,7 @@ class ItemView {
     this.element.querySelector('.item-text__name').innerText = `${this.contact.last}, ${this.contact.first}`;
     this.element.querySelector('.item-text__address--street').innerText = this.contact.street;
     this.element.querySelector('.item-text__address--city').innerText = `${this.contact.city}`;
-    this.element.querySelector('.item-text__address--state').innerText = `${this.contact.state}`;
+    this.element.querySelector('.item-text__address--state').innerText = `, ${this.contact.state}`;
   }
 }
 
