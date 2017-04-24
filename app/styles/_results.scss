@@ -17,12 +17,11 @@
 }
 
 .item-text {
-  // flex-grow: 1;
-  padding: 1rem;
+  padding: 2rem;
 
   &__name {
     display: flex;
-    margin: -1rem 0;
+    margin: 0;
     font-size: 18px;
 
     &--first {

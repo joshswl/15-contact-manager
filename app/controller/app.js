@@ -10,6 +10,7 @@ export default class AppController {
     this.formView = new FormView(element.querySelector('.left-bar'), this.store);
     this.listView = new ListView(element.querySelector('.grid'), this.store);
   }
+
   created() {
     this.store.subscribe(() => {
       const contacts = this.store.getState().contacts;

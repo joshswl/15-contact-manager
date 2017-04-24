@@ -26,16 +26,16 @@ class ItemView {
   }
 
   mounted() {
-    this.element.querySelector('.contact-card__delete').addEventListener('click', () => {
+    this.element.querySelector('.item-button__actual').addEventListener('click', () => {
       this.store.dispatch(remove(this.contact.id));
     });
   }
 
   render() {
-    this.element.querySelector('item-text__name').innerText = `${this.contact.last}, ${this.contact.first}`;
-    this.element.querySelector('item-text__address--street').innerText = this.contact.street;
-    this.element.querySelector('item-text__address--city').innerText = `${this.contact.city}`;
-    this.element.querySelector('item-text__address--state').innerText = `${this.contact.state}`;
+    this.element.querySelector('.item-text__name').innerText = `${this.contact.last}, ${this.contact.first}`;
+    this.element.querySelector('.item-text__address--street').innerText = this.contact.street;
+    this.element.querySelector('.item-text__address--city').innerText = `${this.contact.city}`;
+    this.element.querySelector('.item-text__address--state').innerText = `${this.contact.state}`;
   }
 }
 
@@ -54,6 +54,7 @@ export default class ListView {
   render() {
     this.element.innerHTML = '';
     const contacts = this.store.getState().contacts;
+    console.log(contacts);
 
     contacts.forEach((data) => {
       const view = new ItemView(data, this.store);

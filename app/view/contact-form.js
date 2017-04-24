@@ -11,20 +11,20 @@ export default class ContactFormView {
       event.preventDefault();
 
       const data = {
-        first: this.element.querySelector('.item-text__name--first').value,
-        last: this.element.querySelector('.item-text__name--last').value,
-        street: this.element.querySelector('.item-text__address--street').value,
-        city: this.element.querySelector('.item-text__address--city').value,
-        state: this.element.querySelector('.item-text__address--state').value,
+        first: this.element.querySelector('.first-name').value,
+        last: this.element.querySelector('.last-name').value,
+        street: this.element.querySelector('.street').value,
+        city: this.element.querySelector('.city').value,
+        state: this.element.querySelector('.state').value,
       };
 
       this.store.dispatch(create(data));
 
-      this.element.querySelector('.item-text__name--first').value = '';
-      this.element.querySelector('.item-text__name--last').value = '';
-      this.element.querySelector('.item-text__address--street').value = '';
-      this.element.querySelector('.item-text__address--city').value = '';
-      this.element.querySelector('.item-text__address--state').value = '';
+      this.element.querySelector('.first-name').value = '';
+      this.element.querySelector('.last-name').value = '';
+      this.element.querySelector('.street').value = '';
+      this.element.querySelector('.city').value = '';
+      this.element.querySelector('.state').value = '';
     });
   }
 }
