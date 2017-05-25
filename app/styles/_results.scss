@@ -1,0 +1,55 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: calc(100% / 3 - 1rem - 1rem);
+    flex-grow: 1;
+  }
+}
+
+.card {
+  position: relative;
+  margin: 1rem;
+  border: 1px solid #a8a8a8;
+  border-radius: 1%;
+  background: white;
+}
+
+.item-text {
+  padding: 1rem;
+
+  &__name {
+    display: flex;
+    font-size: 18px;
+
+    &--first {
+      margin-left: 0.3rem;
+    }
+  }
+
+  &__address {
+
+    &--1 {
+      font-size: 14px;
+    }
+
+    &--2 {
+      display: flex;
+      margin: -1rem 0;
+      font-size: 14px;
+    }
+  }
+}
+
+.item-button {
+
+  &__actual {
+    width: 100%;
+    padding: 0.8rem;
+    border: 0;
+    background: #EE3F41;
+    color: white;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,54 @@
+.left-bar {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-width: 25%;
+  min-height: 100vh;
+  background: #44B0F1;
+  box-shadow: 1px 1px 12px rgba(68,68,68,0.6);
+
+  &__top-bar {
+
+    &--text {
+      margin: 0;
+      padding: 0.5rem;
+      background: #E6F4FD;
+      font-weight: bold;
+    }
+  }
+}
+
+.contact-info {
+  flex: 1;
+  padding: 0.5rem;
+
+  &__container {
+    padding: 0.4rem;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 1.5rem;
+    border: 0;
+    background: #E6F4FD;
+  }
+}
+
+.submit {
+
+  &__button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 0;
+    background: #69C37D;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+  }
+}
